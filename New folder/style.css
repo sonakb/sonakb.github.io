@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.link{
+  margin:10px 0;
+}
+
+
+.box1, .box2, .box3{
+ 
+    /*background: url(download.png);*/
+    background-repeat: no-repeat;
+    margin: 20px;
+	position:absolute;
+	justify-content:center;
+	
+animation-duration: 1s;
+}
+.box2{
+	z-index:5;
+}
+
+#circle1, #circle2{
+	 animation: animName 15s linear infinite;
+}
+
+#circle1{
+	width:100%;
+	margin-left:80px;
+	margin-top:-80px;
+}
+#circle2{
+	width:70%;
+	margin-left:-80px;
+	margin-top:-100px;
+}
+#photo{
+	border-radius:50%;
+}
+
+
+body{
+	
+	font-family: "Playfair Display", serif;
+}
+
+@keyframes animName {
+ 0%{
+    transform: rotate(0deg);
+  }
+   50%{
+      transform: rotate(45deg);
+}
+100%{
+    transform: rotate(-45deg);
+   }
+}
+.container{
+	display:flex;
+	justify-content: center;
+	
+	
+}
+.nav-container{
+	display:flex;
+	justify-content:space-between;
+	z-index:5;
+	position:relative;
+}
+#logo{
+	width: 70px;
+    height: 50px;
+    padding: 20px;
+}
+.nav-right{
+	display:flex;
+	justify-content:flex-end;
+	margin-right:30px;
+}
+.navbar{
+	display: inline-flex;
+    list-style-type: none;
+	
+}
+.navbar li{
+	padding:10px;
+	
+}
+
+.navbar li a{
+	text-decoration:none;
+	color:black;
+	text-transform:uppercase;
+	margin-right: 90px
+}
+.navbar li a:hover{
+	border-bottom: 1px solid #000;
+	padding-bottom:10px;
+}
+.txt, .txt2{
+	width:20%;
+	
+	
+	margin-top:10px;
+}
+.txt{
+	margin-left:20px;
+	font-size:120px;
+	  animation-duration: 1s;
+	  animation-delay:1s;
+	  }
+
+.txt2{
+	margin-right:100px;
+	font-size:80px;
+	animation-duration: 1s;
+	
+       
+}
+
+
+
+html{
+	cursor:none;
+}
+.mouse-cursor{position:fixed;left:0;top:0;pointer-events:none;border-radius:50%;-webkit-transform:translateZ(0);transform:translateZ(0);
+  visibility:hidden}
+
+.cursor-inner{/*margin-left:50px;margin-top:50px;*/width:20px;height:20px;z-index:10000001;background-color:#000;-webkit-transition:width .3s ease-in-out,height .3s ease-in-out,margin .3s ease-in-out,opacity .3s ease-in-out;transition:width .3s ease-in-out,height .3s ease-in-out,margin .3s ease-in-out,opacity .3s ease-in-out}
+
+.cursor-inner.cursor-hover{margin-left:-30px;margin-top:-30px;width:60px;height:60px;background-color:#000;opacity:.3}
+
+.cursor-outer{margin-left:-15px;margin-top:-15px;width:200px;height:200px;border:1px solid #000;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:10000000;opacity:.5;-webkit-transition:all .08s ease-out;transition:all .1s ease-out}
+
+.cursor-outer.cursor-hover{opacity:0}
+
+.txt-container{
+	display:flex;
+	justify-content: space-between;
+	
+}
+
+marquee{
+	border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	margin-top: 30px;
+}
+
+#anime span::before{
+  content: '';
+  color: #000;
+  animation: profile 10s infinite;
+  margin-left:20px;
+}
+@keyframes profile {
+  0% { content: 'A WEB DESIGNER'}
+  100% { content: 'A GRAPHIC DESIGNER'}
+}
+
+#row2{
+	color:#000;
+	padding-top:20px;
+	background:none;
+	transition-property: background;
+  transition-duration: 1s;
+  transition-delay: 1s;
+	
+}
+#row2:hover{
+	background:#fff;
+	transition-delay: 0s;
+}
+
+#about{
+	padding: 80px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 40px;
+}
+/*#row2 #about:hover{
+	color:white;
+}*/
+@media only screen and (min-width: 900px) {
+	#anime{
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.navbar li a {
+		margin-right:0px;
+	}
+	#logo {
+    width: 45px;
+    height: 30px;
+	}
+	.nav-container {
+    margin-top: 0px;
+	}
+	.txt {
+    font-size: 30px;
+	width:100%;
+	}
+	.txt2 {
+    font-size: 20px;
+	}
+	.box2{
+		position:relative;
+	}
+	img{
+		width:70%;
+	}
+	.txt2{
+		margin-right:0px;
+		display:none;
+	}
+	#circle1 {
+    width: 70%;
+	margin-left: 99px;
+    margin-top: 40px;
+	}
+	#circle2 {
+    width: 40%;
+	margin-left: -39px;
+    margin-top: -35px;
+	}
+	.box1, .box2, .box3{
+		margin-left:100px;
+	}
+	
+marquee {
+    margin-top: 0px;
+}
+}
+footer{
+	height:30px;
+	background-color:black;
+	bottom: 0px;
+    width: 100%;
+	display:flex;
+	justify-content: center;
+	color:white;
+	padding:10px 0;
+}
+@keyframes backInLeft {
+	 0% {
+		 opacity:0;
+		 
+		
+	 }
+	50% {
+		 opacity:10%;
+		
+	 }
+	 100%{
+		 opacity:100%;
+	 }
+	 

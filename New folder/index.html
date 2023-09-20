@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SKB - Portfolio</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<script type="text/javascript" src="js.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+</head>
+
+<body>
+
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner" ></div>
+<div class="nav-container">
+<div class="logo"><img src="sonalogo.png" id="logo" /></div>
+
+<div class="nav-right">
+<ul class="navbar">
+<li><a href="">Home</a></li>
+<li><a href="">About</a></li>
+<li><a href="">Projects</a></li>
+<li><a href="">Contacts</a></li>
+</ul></div>
+</div>
+<div class="container">
+<!--<div class="box"></div>
+-->
+<div class="box1 animate__backInDown"><img src="download.png" id="circle1"/></div>
+<div class="box2 animate__backInUp">
+<!--<img src="pexels-photo-1065084.jpeg" id="photo" />-->
+<img id='photo' src="pexels-photo-1065084.jpeg" onmouseover="hover(this);" onmouseout="hoverOut(this)"/>
+</div>
+<div class="box3 animate__backInLeft"><img src="download.png" id="circle2"/></div>
+</div>
+<div class="txt-container">
+<div class="txt animate__backInLeft"> HEY, I'M SONA</div>
+<div class="txt2 animate__backInRight">
+WEB DESIGN,<br /> GRAPHIC DESIGN</div>
+</div>
+<div class="txt-container">
+<h1 id="anime"><strong><span></span></strong></h1>
+
+</div>
+<div class="content">
+<marquee behavior="scroll" direction="left">. WEB DESIGN . GRAPHIC DESIGN . WEB DESIGN . GRAPHIC DESIGN .WEB DESIGN . GRAPHIC DESIGN . WEB DESIGN . GRAPHIC DESIGN .</marquee>
+
+</div>
+<div class="txt-container" id="row2">
+<div id="about"><h2>ABOUT ME</h2>
+<p>Hi! I am Sona K Biju, a web/graphic designer focused on crafting great web experiences. Designing and Coding have been my passion.I'm started working in 2016 as a graphic designer and then learned web development.My strength is accuracy and I enjoy creating beautifully designed, intuitive and functional websites. </p></div>
+<div><img src="isometric-psd-web-mockup-1-208-removebg-preview.png" /></div>
+</div>
+<footer>
+<div class="copyright">DESIGNED BY SONA&copy;2020 ALL OF THE RIGHTS RESERVED</div>
+</footer>
+</body>
+<script>
+
+
+function hover(img)
+{
+ img.src = "pexels-pixabay-160414.jpg"
+};
+function hoverOut(img){
+ img.src = "pexels-photo-1065084.jpeg"
+};
+
+const myCursor = document.querySelector('.mouse-cursor')
+
+const aTags = document.querySelectorAll('a')
+const cursorPointers = document.querySelectorAll('.cursor-pointer')
+
+const cursorInner = document.querySelector('.cursor-inner')
+const cursorOuter = document.querySelector('.cursor-outer')
+
+const mouseEnterHandler = (e) => {
+    cursorInner.classList.add('cursor-hover')
+    cursorOuter.classList.add('cursor-hover')
+}
+
+const mouseLeaveHandler = (e) => {
+    cursorInner.classList.remove('cursor-hover')
+    cursorOuter.classList.remove('cursor-hover')
+}
+
+const mouseMoveHandler = (e) => {
+    cursorOuter.style.transform = "translate(" + e.clientX + "px, " + e.clientY + "px)"
+    cursorInner.style.transform = "translate(" + e.clientX + "px, " + e.clientY + "px)"
+
+}
+
+if (myCursor) {
+
+    window.onmousemove = mouseMoveHandler
+
+    aTags.forEach((a) => a.addEventListener("mouseenter", mouseEnterHandler))
+    cursorPointers.forEach((cursorPointer) => cursorPointer.addEventListener("mouseenter", mouseEnterHandler))
+
+    aTags.forEach((a) => a.addEventListener("mouseleave", mouseLeaveHandler))
+    cursorPointers.forEach((cursorPointer) => cursorPointer.addEventListener("mouseleave", mouseLeaveHandler))
+
+    cursorInner.style.visibility = "visible"
+    cursorOuter.style.visibility = "visible"
+
+
+};
+
+
+</script>
+</html>
